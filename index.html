@@ -1,37 +1,402 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-  </style>
-</head>
-<body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
-      <a href="#about">關於我</a>
-      <a href="#projects">作品集</a>
-      <a href="https://example.com/blog">技術部落格</a>
-      <a href="mailto:me@example.com">聯絡我</a>
-    </nav>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>林怡鈴 | 前端工程師</title>
+    <meta
+      name="description"
+      content="林怡鈴的個人履歷網站，展示前端工程經驗、個人專案、工作經歷、技術能力與聯絡方式，採用適合 GitHub Pages 的單頁式設計。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="main-nav" aria-label="主要導覽">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+        </nav>
+      </header>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
-  </footer>
-</body>
+      <main>
+        <section class="hero" id="about">
+          <div class="hero-copy">
+            <p class="hero-kicker">FRONT-END ENGINEER</p>
+            <h1>
+              林怡鈴
+              <span>前端工程師</span>
+            </h1>
+            <p class="hero-description">
+              具備三年 React 前端開發經驗，熟悉 TypeScript、狀態管理與 API
+              串接，目前參與企業級 CRM 系統建置，也持續延伸後端協作能力。
+            </p>
+
+            <ul class="hero-tags" aria-label="個人標籤">
+              <li>React Expert</li>
+              <li>Storyteller</li>
+              <li>Frontend × Backend Collaboration</li>
+            </ul>
+          </div>
+
+          <div class="hero-portrait" aria-hidden="true">
+            <div class="portrait-ring">
+              <div class="portrait-card">
+                <img src="./IMG_3997_small.png" alt="林怡鈴照片" class="portrait-image" />
+              </div>
+            </div>
+            <div class="doodle-accent">
+              <span class="material-symbols-outlined">gesture</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">PROJECTS</p>
+              <h2>個人專案</h2>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-visual">
+                <img
+                  src="./Speak-For-You.png"
+                  alt="Speak For You 網站首頁截圖"
+                  class="project-shot"
+                />
+                <div class="project-visual-mark">AI Agent</div>
+              </div>
+              <div class="project-body">
+                <h3>Speak For You</h3>
+                <p>
+                  結合 Gemini Function Calling 與 OpenWeather API 的對話式 AI
+                  應用，支援工具呼叫、SSE 串流回應與前後端分離架構。
+                </p>
+                <ul class="project-tags" aria-label="Speak For You 使用技術">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>SSE</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://ai-agent-pi-nine.vercel.app/" target="_blank" rel="noreferrer"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/linlindon/speak-for-you-agent"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-visual">
+                <img
+                  src="./Bookia.png"
+                  alt="Bookia 網站首頁截圖"
+                  class="project-shot"
+                />
+                <div class="project-visual-mark">Reading Notes</div>
+              </div>
+              <div class="project-body">
+                <h3>Bookia</h3>
+                <p>
+                  為作家與重度閱讀者打造的閱讀筆記工具，支援書籍搜尋、標籤管理、
+                  CKEditor 編輯與 Firebase 驗證及部署流程。
+                </p>
+                <ul class="project-tags" aria-label="Bookia 使用技術">
+                  <li>React</li>
+                  <li>React Router</li>
+                  <li>Firebase</li>
+                  <li>CKEditor5</li>
+                  <li>Google Books API</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://bookia-280d8.web.app/" target="_blank" rel="noreferrer"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="experience-section" id="experience">
+          <div class="experience-inner">
+            <div class="section-heading experience-heading">
+              <div>
+                <p class="section-kicker">EXPERIENCE</p>
+                <h2>工作經歷</h2>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2025.07 — 至今</span>
+                  <p class="timeline-company timeline-company-primary">
+                    喬山健康科技股份有限公司
+                  </p>
+                </div>
+
+                <div class="timeline-divider timeline-divider-primary" aria-hidden="true">
+                  <span class="timeline-dot"></span>
+                </div>
+
+                <div class="timeline-content">
+                  <h3>副工程師</h3>
+                  <ul class="timeline-points">
+                    <li>
+                      參與企業級 CRM 系統從零開始建置，用以取代 Microsoft CRM，支援未來多國子公司分階段導入。
+                    </li>
+                    <li>
+                      使用 Next.js、TypeScript、Tailwind CSS、Shadcn 建構管理系統，支援多實體與複雜商業流程。
+                    </li>
+                    <li>設計並實作全站多國語系系統與錯誤處理機制，提升系統穩定性。</li>
+                    <li>
+                      隨團隊需求轉向後端開發，使用 C# / .NET 處理 API 與資料存取邏輯，並採用 Clean Architecture。
+                    </li>
+                    <li>參與 MSSQL 資料庫 schema 設計與調整，配合 CRM Entity 結構與 API 資料需求。</li>
+                    <li>
+                      協助團隊導入 Claude Code AI 開發工具，進行 Prompt Engineering 與 MCP 工具整合，平均縮短開發週期 40%。
+                    </li>
+                  </ul>
+                  <ul class="timeline-tags" aria-label="喬山健康科技使用技術">
+                    <li>Next.js</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind CSS</li>
+                    <li>Shadcn</li>
+                    <li>C# / .NET</li>
+                    <li>MSSQL</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2022.09 — 2025.02</span>
+                  <p class="timeline-company timeline-company-secondary">
+                    新芽網路股份有限公司
+                  </p>
+                </div>
+
+                <div class="timeline-divider timeline-divider-secondary" aria-hidden="true">
+                  <span class="timeline-dot"></span>
+                </div>
+
+                <div class="timeline-content">
+                  <h3>前端工程師</h3>
+                  <ul class="timeline-points">
+                    <li>
+                      負責多個不同產業網站的新功能開發、前端維護與效能優化，並與後端工程師合作設計 API 資料結構。
+                    </li>
+                    <li>
+                      主動與 PM 和客戶溝通需求，根據反饋優化 UI/UX，提升整體使用者體驗與操作流程。
+                    </li>
+                    <li>
+                      與 iOS / Android App 團隊協作，處理 WebView 整合問題，確保不同瀏覽器與裝置上的兼容性。
+                    </li>
+                    <li>依據專案需求設計並擴充功能，確保新功能與既有架構穩定整合。</li>
+                    <li>
+                      主要使用 React + Redux，也在不同專案中使用過 TypeScript、Vue 2 等框架環境。
+                    </li>
+                    <li>具備 AWS Lambda 與 S3 的實務經驗。</li>
+                  </ul>
+                  <ul class="timeline-tags" aria-label="新芽網路使用技術">
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>TypeScript</li>
+                    <li>Vue 2</li>
+                    <li>AWS Lambda</li>
+                    <li>S3</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2022.01 — 2022.06</span>
+                  <p class="timeline-company timeline-company-tertiary">AppWorks School</p>
+                </div>
+
+                <div class="timeline-divider timeline-divider-tertiary" aria-hidden="true">
+                  <span class="timeline-dot"></span>
+                </div>
+
+                <div class="timeline-content">
+                  <h3>前端實習生</h3>
+                  <ul class="timeline-points">
+                    <li>
+                      與後端工程師及 iOS 開發人員組成 Scrum 團隊，共同開發 STYLiSH 購物網站新功能。
+                    </li>
+                    <li>實作使用 Socket.IO 的即時聊天室等互動功能。</li>
+                    <li>獨立開發個人專案網站 Bookia，希望解決編劇筆記與搜尋的痛點。</li>
+                    <li>享受團隊合作與問題討論，持續優化使用者流程與產品體驗。</li>
+                  </ul>
+                  <ul class="timeline-tags" aria-label="AppWorks School 使用技術">
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>Firebase</li>
+                    <li>Socket.IO</li>
+                    <li>Scrum</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+          <div class="skills-inner">
+            <div class="section-heading skills-heading">
+              <div>
+                <p class="section-kicker">SKILLS</p>
+                <h2>技術</h2>
+              </div>
+            </div>
+
+            <div class="skills-grid">
+              <article class="skill-card skill-card-frontend">
+                <div class="skill-card-doodle" aria-hidden="true">
+                  <span class="material-symbols-outlined">grid_view</span>
+                </div>
+                <h3>
+                  <span class="material-symbols-outlined">web</span>
+                  Frontend
+                </h3>
+                <ul class="skill-tags" aria-label="前端技術">
+                  <li>React / Next.js</li>
+                  <li>CSS / Tailwind</li>
+                  <li>JavaScript</li>
+                  <li>Redux / Zustand</li>
+                  <li>TypeScript</li>
+                </ul>
+              </article>
+
+              <article class="skill-card skill-card-backend">
+                <div class="skill-card-doodle" aria-hidden="true">
+                  <span class="material-symbols-outlined">smart_toy</span>
+                </div>
+                <h3>
+                  <span class="material-symbols-outlined">memory</span>
+                  Backend
+                </h3>
+                <ul class="skill-tags" aria-label="後端技術">
+                  <li>MSSQL</li>
+                  <li>C#</li>
+                  <li>ASP.NET Core</li>
+                </ul>
+              </article>
+
+              <article class="skill-card skill-card-tools">
+                <div class="skill-card-doodle" aria-hidden="true">
+                  <span class="material-symbols-outlined">brush</span>
+                </div>
+                <h3>
+                  <span class="material-symbols-outlined">build</span>
+                  Professional Tools
+                </h3>
+                <ul class="skill-tags" aria-label="工具與協作能力">
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>GitLab</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="notes-section" id="education">
+          <div class="notes-inner">
+            <div class="notes-grid">
+              <div class="notes-column">
+                <h2 class="notes-title">
+                  <span class="material-symbols-outlined">school</span>
+                  學歷
+                </h2>
+
+                <div class="sticky-grid">
+                  <article class="sticky-note sticky-note-left">
+                    <span class="sticky-tape" aria-hidden="true"></span>
+                    <div class="sticky-icon">
+                      <span class="material-symbols-outlined">language</span>
+                    </div>
+                    <div class="sticky-body">
+                      <h3>Rennes 2 University</h3>
+                      <p>法國雷恩第二大學附屬語言學校 CIREFE</p>
+                      <span>2009 — 2010</span>
+                    </div>
+                  </article>
+
+                  <article class="sticky-note sticky-note-right">
+                    <span class="sticky-tape" aria-hidden="true"></span>
+                    <div class="sticky-icon">
+                      <span class="material-symbols-outlined">history_edu</span>
+                    </div>
+                    <div class="sticky-body">
+                      <h3>世新大學</h3>
+                      <p>社會心理學系</p>
+                      <span>2003 — 2007</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="notes-column">
+                <h2 class="notes-title notes-title-secondary">
+                  <span class="material-symbols-outlined">workspace_premium</span>
+                  其他經歷
+                </h2>
+
+                <div class="sticky-grid sticky-grid-recognition">
+                  <article class="sticky-note sticky-note-right">
+                    <span class="sticky-tape" aria-hidden="true"></span>
+                    <div class="sticky-icon sticky-icon-secondary">
+                      <span class="material-symbols-outlined">rewarded_ads</span>
+                    </div>
+                    <div class="sticky-body">
+                      <h3>編劇獎項提名</h3>
+                      <p>擔任《衣櫃裡的貓》編劇，入圍第 51 屆金鐘獎最佳編劇獎。</p>
+                      <span>2016</span>
+                    </div>
+                  </article>
+
+                  <article class="sticky-note sticky-note-left">
+                    <span class="sticky-tape" aria-hidden="true"></span>
+                    <div class="sticky-icon sticky-icon-tertiary">
+                      <span class="material-symbols-outlined">fitness_center</span>
+                    </div>
+                    <div class="sticky-body">
+                      <h3>Hi-Low 有氧證照</h3>
+                      <p>工作期間考取有氧健身教練證照，熱愛運動並樂於與他人分享。</p>
+                      <span>2019</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
